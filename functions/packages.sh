@@ -214,12 +214,12 @@ install_all()
             [[ X"${DISTRO_VERSION}" == X'8' ]] && ALL_PKGS="${ALL_PKGS} php-cli php-common php-fpm php-gd php-xml php-mysqlnd php-ldap php-pgsql php-mbstring php-pecl-apcu php-intl php-json php-pecl-zip"
 
         elif [ X"${DISTRO}" == X'DEBIAN' -o X"${DISTRO}" == X'UBUNTU' ]; then
-            # Debian 9
-            ALL_PKGS="${ALL_PKGS} php-cli php-fpm php-json php-gd php-curl mcrypt php-intl php-xml php-mbstring php-zip"
+            # Debian 10
+            ALL_PKGS="${ALL_PKGS} php7.3-cli php7.3-fpm php7.3-json php7.3-gd php7.3-curl mcrypt php7.3-intl php7.3-xml php7.3-mbstring php7.3-zip"
 
-            [ X"${BACKEND}" == X'OPENLDAP' ] && ALL_PKGS="${ALL_PKGS} php-ldap php-mysql"
-            [ X"${BACKEND}" == X'MYSQL' ] && ALL_PKGS="${ALL_PKGS} php-mysql"
-            [ X"${BACKEND}" == X'PGSQL' ] && ALL_PKGS="${ALL_PKGS} php-pgsql"
+            [ X"${BACKEND}" == X'OPENLDAP' ] && ALL_PKGS="${ALL_PKGS} php7.3-ldap php7.3-mysql"
+            [ X"${BACKEND}" == X'MYSQL' ] && ALL_PKGS="${ALL_PKGS} php7.3-mysql"
+            [ X"${BACKEND}" == X'PGSQL' ] && ALL_PKGS="${ALL_PKGS} php7.3-pgsql"
         elif [ X"${DISTRO}" == X'OPENBSD' ]; then
             ALL_PKGS="${ALL_PKGS} php${OB_PKG_PHP_VER} php-bz2${OB_PKG_PHP_VER} php-imap${OB_PKG_PHP_VER} php-gd${OB_PKG_PHP_VER} php-intl${OB_PKG_PHP_VER} php-zip${OB_PKG_PHP_VER}"
 
